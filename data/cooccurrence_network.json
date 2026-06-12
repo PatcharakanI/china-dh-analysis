@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "economic",
+      "label": "Economic",
+      "count": 446
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "count": 220
+    },
+    {
+      "id": "engagement",
+      "label": "Engagement",
+      "count": 307
+    },
+    {
+      "id": "human_rights",
+      "label": "Human Rights",
+      "count": 131
+    },
+    {
+      "id": "competition",
+      "label": "Competition",
+      "count": 60
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "count": 64
+    }
+  ],
+  "edges": [
+    {
+      "source": "economic",
+      "target": "engagement",
+      "weight": 103
+    },
+    {
+      "source": "engagement",
+      "target": "security",
+      "weight": 85
+    },
+    {
+      "source": "economic",
+      "target": "security",
+      "weight": 57
+    },
+    {
+      "source": "engagement",
+      "target": "human_rights",
+      "weight": 37
+    },
+    {
+      "source": "competition",
+      "target": "economic",
+      "weight": 37
+    },
+    {
+      "source": "economic",
+      "target": "human_rights",
+      "weight": 30
+    },
+    {
+      "source": "economic",
+      "target": "technology",
+      "weight": 24
+    },
+    {
+      "source": "competition",
+      "target": "engagement",
+      "weight": 20
+    },
+    {
+      "source": "human_rights",
+      "target": "security",
+      "weight": 17
+    },
+    {
+      "source": "security",
+      "target": "technology",
+      "weight": 14
+    },
+    {
+      "source": "competition",
+      "target": "security",
+      "weight": 14
+    },
+    {
+      "source": "engagement",
+      "target": "technology",
+      "weight": 13
+    },
+    {
+      "source": "human_rights",
+      "target": "technology",
+      "weight": 4
+    },
+    {
+      "source": "competition",
+      "target": "technology",
+      "weight": 3
+    }
+  ]
+}

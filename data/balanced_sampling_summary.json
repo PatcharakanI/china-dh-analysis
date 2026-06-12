@@ -1,0 +1,30 @@
+[
+  {
+    "decade": "1990s",
+    "original_clean_articles": 389,
+    "balanced_articles": 389,
+    "target_articles_per_decade": 389,
+    "random_seed": 42
+  },
+  {
+    "decade": "2000s",
+    "original_clean_articles": 657,
+    "balanced_articles": 389,
+    "target_articles_per_decade": 389,
+    "random_seed": 42
+  },
+  {
+    "decade": "2010s",
+    "original_clean_articles": 995,
+    "balanced_articles": 389,
+    "target_articles_per_decade": 389,
+    "random_seed": 42
+  },
+  {
+    "decade": "2020s",
+    "original_clean_articles": 508,
+    "balanced_articles": 389,
+    "target_articles_per_decade": 389,
+    "random_seed": 42
+  }
+]
