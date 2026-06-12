@@ -1,0 +1,38 @@
+[
+  {
+    "decade": "1990s",
+    "articles": 389,
+    "engagement_prevalence": 26.735218509,
+    "conflict_prevalence": 14.9100257069,
+    "engagement_mentions": 288,
+    "conflict_mentions": 122,
+    "conflict_to_engagement_ratio": 0.4221453287
+  },
+  {
+    "decade": "2000s",
+    "articles": 389,
+    "engagement_prevalence": 21.5938303342,
+    "conflict_prevalence": 14.3958868895,
+    "engagement_mentions": 203,
+    "conflict_mentions": 139,
+    "conflict_to_engagement_ratio": 0.681372549
+  },
+  {
+    "decade": "2010s",
+    "articles": 389,
+    "engagement_prevalence": 18.2519280206,
+    "conflict_prevalence": 14.1388174807,
+    "engagement_mentions": 117,
+    "conflict_mentions": 106,
+    "conflict_to_engagement_ratio": 0.8983050847
+  },
+  {
+    "decade": "2020s",
+    "articles": 389,
+    "engagement_prevalence": 26.2210796915,
+    "conflict_prevalence": 24.6786632391,
+    "engagement_mentions": 182,
+    "conflict_mentions": 169,
+    "conflict_to_engagement_ratio": 0.9234972678
+  }
+]

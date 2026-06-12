@@ -1,0 +1,37 @@
+year,indicator,turning_point_type,change_from_previous_year,score
+1991,competition_score,competition framing rises sharply,7.495692647398928,8.366013071895425
+1992,net_framing_score,net framing score changes direction,-38.421581172033974,-5.935558650575596
+1992,opportunity_score,opportunity framing drops sharply,-23.28899693767649,0.8853474988933157
+1993,net_framing_score,net framing score changes direction,5.95517928667856,0.019620636102963555
+1993,threat_score,threat framing rises sharply,8.951670053086069,13.2751483671332
+1998,net_framing_score,net framing score changes direction,-5.788790608260044,10.222722936413298
+1999,net_framing_score,net framing score changes direction,8.527532258486957,18.750255194900255
+2000,net_framing_score,net framing score changes direction,-11.260126912081382,7.4901282828188736
+2002,net_framing_score,net framing score changes direction,11.043931814404266,11.41826691093715
+2003,net_framing_score,net framing score changes direction,-1.9238636318025648,9.494403279134586
+2004,net_framing_score,net framing score changes direction,0.19968377355523081,9.694087052689817
+2006,net_framing_score,net framing score changes direction,-13.720905131993,4.273899616878743
+2006,opportunity_score,opportunity framing drops sharply,-13.95952075925,7.586004777652009
+2007,net_framing_score,net framing score changes direction,1.2559165310006408,5.529816147879384
+2008,net_framing_score,net framing score changes direction,-1.8458868245575464,3.6839293233218373
+2009,net_framing_score,net framing score changes direction,3.7910606505141202,7.4749899738359575
+2011,net_framing_score,net framing score changes direction,-14.678110514758867,3.6419019931490233
+2011,opportunity_score,opportunity framing drops sharply,-8.802194955193348,12.896007586762144
+2012,net_framing_score,net framing score changes direction,10.12127991388368,13.763181907032703
+2013,net_framing_score,net framing score changes direction,-1.8099732298397342,11.953208677192968
+2015,net_framing_score,net framing score changes direction,4.2114892230200365,9.453265256609729
+2016,net_framing_score,net framing score changes direction,-0.4193914675251236,9.033873789084605
+2017,net_framing_score,net framing score changes direction,5.358828526207654,14.39270231529226
+2017,threat_score,threat framing rises sharply,5.483194090746451,13.711850174945353
+2018,competition_score,competition framing rises sharply,7.731379448003617,9.662567596848282
+2018,net_framing_score,net framing score changes direction,-10.01440560809867,4.3782967071935905
+2019,net_framing_score,net framing score changes direction,0.03863939480609879,4.416936101999689
+2020,net_framing_score,net framing score changes direction,-7.404934971844172,-2.9879988698444833
+2021,net_framing_score,net framing score changes direction,5.293323190835618,2.3053243209911347
+2022,competition_score,competition framing rises sharply,4.207167524474377,7.538331719116857
+2022,net_framing_score,net framing score changes direction,-16.03195888785943,-13.726634566868299
+2022,threat_score,threat framing rises sharply,8.833741261440903,19.991184693437344
+2023,net_framing_score,net framing score changes direction,12.515345099107332,-1.2112894677609667
+2025,competition_score,competition framing rises sharply,9.781769524288308,12.72886223260757
+2025,net_framing_score,net framing score changes direction,-1.4038404024967366,3.1362227951646324
+2025,threat_score,threat framing rises sharply,6.808548641241618,17.53106547338641

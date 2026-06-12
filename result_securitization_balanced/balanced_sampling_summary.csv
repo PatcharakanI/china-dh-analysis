@@ -1,0 +1,5 @@
+decade,original_clean_articles,balanced_articles,target_articles_per_decade,random_seed
+1990s,389,389,389,42
+2000s,657,389,389,42
+2010s,995,389,389,42
+2020s,508,389,389,42

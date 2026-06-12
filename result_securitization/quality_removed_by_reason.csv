@@ -1,0 +1,8 @@
+quality_reason,removed_articles
+very_short_text_without_keywords,1800
+empty_or_nearly_empty_description,1306
+review_lifestyle_or_non_news_section,609
+low_value_format_or_digest,399
+low_value_headline_pattern,169
+letter_or_correction,123
+duplicate_headline_date,40
