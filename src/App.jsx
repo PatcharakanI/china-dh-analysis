@@ -229,6 +229,55 @@ function Landing({ balanceSummary, onResult, onAbout }) {
   );
 }
 
+function HomeNarrative() {
+  return (
+    <section className="home-narrative section">
+      <div className="section-heading">
+        <p className="eyebrow">Project Narrative</p>
+        <h2>From Economic Promise To Strategic Risk</h2>
+        <p className="section-note">
+          This project follows a change in language: economic connection with China did not disappear, but it increasingly
+          became described through security, technology, rivalry, and vulnerability.
+        </p>
+      </div>
+      <div className="narrative-feature">
+        <article className="narrative-feature-main">
+          <span>Central Story</span>
+          <h3>When did integration stop sounding only like opportunity?</h3>
+          <p>
+            In the globalization era, economic integration was often imagined as a pathway toward cooperation and mutual
+            benefit. China could be described through trade, markets, reform, growth, and engagement. Over time, however,
+            those same economic topics began to appear beside words about security, threat, competition, technology,
+            sanctions, supply chains, and strategic rivalry.
+          </p>
+          <p>
+            The project therefore does not simply ask whether coverage became more negative. It asks how the meaning of
+            economic interdependence changed in public discourse: from a possible promise of convergence to a possible
+            source of risk.
+          </p>
+        </article>
+        <div className="narrative-path">
+          <article>
+            <span>1990s-2000s</span>
+            <strong>Integration</strong>
+            <p>Markets, reform, trade, and globalization frame China as part of an expanding economic order.</p>
+          </article>
+          <article>
+            <span>2010s</span>
+            <strong>Transition</strong>
+            <p>Economic language remains strong, but technology, politics, and competition become harder to separate.</p>
+          </article>
+          <article>
+            <span>2020s</span>
+            <strong>Securitization</strong>
+            <p>Supply chains, chips, export controls, public health, and rivalry make economic connection look more risky.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AboutPage({ framingDecade = [], cooccurrenceDecade = [], themeFraming = [], balanceSummary = [] }) {
   const target = balanceSummary?.[0]?.target_articles_per_decade;
   const net1990s = metricFor(framingDecade, "1990s", "net_framing_score");
@@ -269,7 +318,9 @@ function AboutPage({ framingDecade = [], cooccurrenceDecade = [], themeFraming =
           </Card>
           <Card title="Main Question">
             <p>
-              This project asks whether the changing relationship can be explained solely by economic competition and political differences, or whether other factors also contributed to the shift. More specifically, it examines whether economic issues increasingly became linked to ideas of security, competition, and rivalry. Rather than focusing only on political events, the project investigates how these transformations were reflected in media language and public discourse.
+              How has the language surrounding China in New York Times reporting shifted over the past three decades?
+              More specifically, when did economic language about China begin to appear alongside security, technology,
+              rivalry, and competition language?
             </p>
           </Card>
           <Card title="Short Answer From The Project Result">
@@ -286,7 +337,7 @@ function AboutPage({ framingDecade = [], cooccurrenceDecade = [], themeFraming =
           </Card>
           <Card title="Digital Method">
             <p>
-              Using the New York Times Article Search API, I collected article metadata and textual summaries from 1990 to 2025. After filtering low-information records and balancing the corpus by decade, I analyzed the data using framing dictionaries, semantic similarity measures, metadata categories, co-occurrence analysis, and representative articles selected for close reading.
+              Using the New York Times Article Search API, I collected article metadata and textual summaries from 1990 to 2025. After filtering low-information records and balancing the corpus by decade, I analyzed the data using word frequencies, framing dictionaries, semantic similarity measures, metadata categories, and representative articles selected for close reading.
             </p>
           </Card>
           <Card title="How To Read The Evidence">
@@ -387,7 +438,7 @@ function DecadeSummaries({ framingDecade, cooccurrenceDecade, technologyBridge, 
     },
     "2010s": {
       title: "Competition becomes harder to separate from economics",
-      body: "This decade is a transition zone. Economic vocabulary remains strong, but technology, cyber, territorial disputes, and strategic competition become more visible. The data should be read as gradual change rather than a single sudden break.",
+      body: "This decade is a transition zone. Economic vocabulary remains strong, but technology, cyber, territorial disputes, and strategic competition become more visible.",
     },
     "2020s": {
       title: "Economic security and technological rivalry",
@@ -401,7 +452,7 @@ function DecadeSummaries({ framingDecade, cooccurrenceDecade, technologyBridge, 
         <p className="eyebrow">Decade Summaries</p>
         <h2>Four Periods In The Corpus</h2>
         <p className="section-note">
-          These summaries translate the charts into a historical reading. The numbers are clues for interpretation,
+          Decade summaries combines several decade-level analysis outputs. It summarizes framing scores, economic-security overlap, conflict/engagement measures, and technology-security-economy overlap for each decade. These summaries translate the charts into a historical reading. However, the numbers are clues for interpretation,
           not automatic conclusions.
         </p>
       </div>
@@ -455,7 +506,7 @@ function TurningPointExplanations({ events, framingYear, cooccurrenceYear }) {
         <p className="eyebrow">Turning Points</p>
         <h2>Events That Help Interpret The Curves</h2>
         <p className="section-note">
-          These events are not treated as automatic causes. They are guideposts for asking when changes in vocabulary
+          This analysis shows vocabulary-based scores from articles published in the same year as major historical events. They are guideposts for asking when changes in vocabulary
           become visible in the corpus.
         </p>
       </div>
@@ -486,6 +537,16 @@ function CloseReadingGuide({ articles }) {
     "high_economy_security_overlap",
     "high_technology_security_overlap",
   ];
+  const profileInterpretations = {
+    high_economic_low_security:
+      "This example shows China appearing mainly as an economic factor, with little or no security vocabulary attached to the article summary.",
+    high_security_low_economic:
+      "This example shows China being framed more through security language than through market or trade language.",
+    high_economy_security_overlap:
+      "This example shows the project's central overlap: economic language and security language appearing in the same article context.",
+    high_technology_security_overlap:
+      "This example shows how technology becomes a bridge between economic competition and national security concerns.",
+  };
   const selected = desiredProfiles
     .map((profile) => articles.find((article) => article.profile === profile && article.abstract))
     .filter(Boolean);
@@ -495,6 +556,10 @@ function CloseReadingGuide({ articles }) {
       <div className="section-heading">
         <p className="eyebrow">Close Reading Examples</p>
         <h2>From Quantitative Pattern To Historical Interpretation</h2>
+        <p>
+          The score selects articles that fit a vocabulary pattern. The historical interpretation comes from reading
+          the headline and summary with that pattern in mind.
+        </p>
       </div>
       <div className="close-reading-grid">
         {selected.map((article) => (
@@ -502,6 +567,7 @@ function CloseReadingGuide({ articles }) {
             <span>{article.profile.replaceAll("_", " ")}</span>
             <h3>{article.headline}</h3>
             <p>{article.abstract}</p>
+            <p className="interpretation-note">{profileInterpretations[article.profile]}</p>
             <dl>
               <div><dt>Year</dt><dd>{article.year}</dd></div>
               <div><dt>Section</dt><dd>{article.section || "Unknown"}</dd></div>
@@ -592,7 +658,7 @@ function TimelineDashboard({ framingYear, events }) {
         <Card title="How To Read This Quickly">
           <Explainer
             measures="The yearly average number of frame-dictionary words per 1,000 article tokens."
-            read="A rising threat line means that, in that year, the sampled articles used more words from the threat dictionary. Start with opportunity vs. threat, then turn on competition or engagement to compare specific frames."
+            read="Each line represents one framing dictionary. A rising line means that articles in that year used more words from that dictionary. For example, a rising threat line means more threat/security vocabulary, while a rising opportunity line means more market, growth, trade, or engagement-oriented vocabulary."
             caution="It does not prove what journalists felt or intended. It only shows changes in vocabulary frequency."
           />
         </Card>
@@ -635,7 +701,7 @@ function DecadeFramingComparison({ framingDecade }) {
         <Card title="Why This Chart Is Here">
           <Explainer
             measures="Average dictionary-term mentions per 1,000 article tokens, grouped by decade."
-            read="Bars make decade comparison easier than the yearly line chart. Positive framing combines opportunity and cooperation terms. Negative framing combines threat and competition terms."
+            read="Positive framing combines opportunity and cooperation terms. Negative framing combines threat and competition terms."
             caution="The bars are dictionary indicators, not sentiment labels assigned by a human reader."
           />
         </Card>
@@ -669,7 +735,7 @@ function Securitization({ cooccurrenceYear, cooccurrenceDecade }) {
         <Card title="Metric Definition">
           <Explainer
             measures="The share of articles containing economic language, security language, or both in the same article."
-            read="The decade cards show the overlap rate: the percent of articles in that decade that contain at least one economic term and at least one security term."
+            read="The graphs show the overlap rate: the percent of articles in that decade that contain at least one economic term and at least one security term."
             caution="A co-occurrence does not prove the article argues that economics is security. It shows that both vocabularies appear together."
           />
           <dl className="metric-list">
@@ -986,6 +1052,13 @@ function MethodLimitations() {
             framing patterns and should be paired with close reading.
           </p>
         </Card>
+        <Card title="Narrative Arc">
+          <p>
+            The analysis connects separate measurements into one historical question:
+            whether China moves from a language of engagement and economic opportunity
+            toward a language of security, rivalry, technology, and competition.
+          </p>
+        </Card>
         <Card title="Embeddings">
           <p>
             Word vectors are built separately by decade from co-occurrence patterns.
@@ -1044,7 +1117,6 @@ function TermsPage() {
           <h2>Definitions And Dictionary Words</h2>
           <p className="section-note">
             This page explains the key terms used in this project and lists the words counted in each framing dictionary.
-            These dictionaries are interpretive tools: they make the method transparent, but they are not objective proof of sentiment.
           </p>
         </div>
 
@@ -1094,8 +1166,37 @@ function TermsPage() {
           </Card>
           <Card title="Competition">
             <p>
-              Competition means language of rivalry, trade conflict, tariffs, decoupling, strategic pressure, or dominance.
+              Competition means language of rivalry, trade conflict, tariffs, strategic pressure, or dominance.
               It is counted separately from threat because competition can be economic, political, or technological.
+            </p>
+          </Card>
+          <Card title="Net Framing Score">
+            <p>
+              Net framing score is calculated as positive framing minus negative framing. In this project, positive
+              framing combines opportunity and cooperation words, while negative framing combines threat and competition
+              words. A lower score means negative or rivalry-oriented vocabulary is more prominent relative to positive
+              or engagement-oriented vocabulary.
+            </p>
+          </Card>
+          <Card title="Economy-Security Overlap">
+            <p>
+              Economy-security overlap is the percent of articles that contain at least one economic term and at least
+              one security term. It does not prove causation, but it shows when economic issues and security language
+              begin appearing together more often.
+            </p>
+          </Card>
+          <Card title="TF-IDF Keywords">
+            <p>
+              TF-IDF highlights terms that are especially distinctive in one decade compared with the others. A high
+              TF-IDF score means the word helps distinguish that decade's
+              language from the rest of the corpus.
+            </p>
+          </Card>
+          <Card title="Cosine Similarity">
+            <p>
+              Cosine similarity compares the context of two words in the decade-level embedding model. A higher value
+              means the two words appeared in more similar surrounding contexts. It helps test whether
+              terms like trade, technology, and security move closer together over time.
             </p>
           </Card>
         </div>
@@ -1108,6 +1209,7 @@ function ExhibitPage({ data, setPage }) {
   return (
     <main>
       <Landing balanceSummary={data.balanceSummary} onResult={() => setPage("result")} onAbout={() => setPage("about")} />
+      <HomeNarrative />
       <ReferencesSection references={data.references} />
     </main>
   );
